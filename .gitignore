@@ -1,0 +1,33 @@
+# Airflow volume-mounted directories (contents can be large/generated)
+logs/
+logs/**
+!/logs/.gitkeep  # Optional: add an empty .gitkeep if you want to commit the empty folder structure
+
+plugins/
+plugins/**
+
+# config/
+config/**
+
+# Python cache files (often generated in dags/ if you have subfolders/modules)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment and local config
+.env
+.env.local
+.env.example
+venv/
+*.cfg
+
+# IDE/editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db

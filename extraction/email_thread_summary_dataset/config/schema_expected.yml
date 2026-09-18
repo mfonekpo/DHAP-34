@@ -1,0 +1,30 @@
+table: public.email_thread_details
+
+primary_key:
+  - thread_id
+
+
+columns:
+  - name: thread_id
+    type: integer
+    nullable: false
+
+  - name: subject
+    type: varchar(255)
+    nullable: true
+
+  - name: timestamp
+    type: timestamp
+    nullable: false
+
+  - name: from
+    type: varchar(255)
+    nullable: false
+
+  - name: to
+    type: text
+    nullable: false
+
+  - name: body
+    type: text
+    nullable: true
