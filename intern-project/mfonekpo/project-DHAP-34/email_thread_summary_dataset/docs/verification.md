@@ -3,6 +3,10 @@
 Verified against the actual local `email_thread_details.csv`, not just a sample.
 Runtime: Docker Compose v2.40.0, Airflow 2.11.2 / Python 3.11, PostgreSQL 16.15.
 
+This is a dated record of the completed verification, not a live status report.
+Compose uses the `postgres:16` tag, so a later image pull may use a different 16.x
+patch release. Follow the runbook to recheck a changed environment or source file.
+
 ## Results
 
 | Check | Observed result |
@@ -68,7 +72,8 @@ docker compose run --rm airflow-cli python /opt/airflow/project/scripts/acceptan
 
 ## Remaining external submission
 
-The implementation and local validation are complete. The current checkout is
-`mfonekpo/DHAP-34`; submitting to `Glynac-AI/airflow-dag-configs` still requires a
-commit/PR under the specified intern subtree. No central-repository changes or
-PR were made. Original project folders remain available for reference.
+Local implementation and validation were completed in the `mfonekpo/DHAP-34`
+checkout. No changes or PR to `Glynac-AI/airflow-dag-configs` were made during this
+verification; central submission is a separate step under the specified intern
+subtree. The old project folders have since been removed from the current
+checkout; their original contents remain available in Git history.
