@@ -1,0 +1,6 @@
+# Build an image from an explicit allowlist. Never send local CSVs or .env to Docker.
+**
+!Dockerfile
+!requirements.txt
+!scripts/
+!scripts/airflow_env.py

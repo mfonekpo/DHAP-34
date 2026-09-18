@@ -1,0 +1,50 @@
+{
+  "dag_id": "load_email_thread_summary_to_postgres",
+  "source_sha256": "9fb54399233cdd258c9c6eb859e083a67112dd2f5924c1eafb4616910061d75c",
+  "first_load": {
+    "run_id": "manual__2026-09-18T16:38:32.857764+00:00",
+    "tasks": {
+      "check_dataset_status": "success",
+      "load_to_postgres": "success",
+      "read_csv": "success",
+      "transform": "success",
+      "validate_schema": "success"
+    },
+    "rows": 21684,
+    "record_ids_md5": "40e89a9b6b8a6126de84317b4e7ba537"
+  },
+  "rerun": {
+    "run_id": "manual__2026-09-18T16:38:37.817114+00:00",
+    "tasks": {
+      "check_dataset_status": "success",
+      "load_to_postgres": "success",
+      "read_csv": "success",
+      "transform": "success",
+      "validate_schema": "success"
+    },
+    "rows": 21684,
+    "record_ids_md5": "40e89a9b6b8a6126de84317b4e7ba537"
+  },
+  "malformed_csv": {
+    "run_id": "manual__2026-09-18T16:38:42.236045+00:00",
+    "tasks": {
+      "check_dataset_status": "success",
+      "load_to_postgres": "upstream_failed",
+      "read_csv": "success",
+      "transform": "upstream_failed",
+      "validate_schema": "failed"
+    },
+    "target_unchanged": true
+  },
+  "pending_dataset": {
+    "run_id": "manual__2026-09-18T16:38:43.534663+00:00",
+    "tasks": {
+      "check_dataset_status": "skipped",
+      "read_csv": "skipped",
+      "validate_schema": "skipped",
+      "transform": "skipped",
+      "load_to_postgres": "skipped"
+    },
+    "target_unchanged": true
+  }
+}

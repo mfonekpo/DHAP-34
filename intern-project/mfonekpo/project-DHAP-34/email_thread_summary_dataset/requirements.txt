@@ -1,0 +1,7 @@
+# Versions from Apache Airflow 2.11.2's official Python 3.11 constraints.
+# Keep Airflow pinned here so pip cannot silently upgrade the base image.
+apache-airflow==2.11.2
+apache-airflow-providers-postgres==6.6.0
+pandas==2.1.4
+PyYAML==6.0.3
+psycopg2-binary==2.9.11

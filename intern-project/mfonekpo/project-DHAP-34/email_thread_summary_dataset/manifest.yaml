@@ -1,0 +1,20 @@
+dataset: email_thread_summary_dataset
+version: 1
+owner: mfonekpo
+description: Email message details from the Email Thread Summary dataset.
+source:
+  system: SharePoint
+  dataset_code: 100
+  download: manual
+  reference: https://glynac-my.sharepoint.com/:x:/r/personal/nurdin_glynac_ai/_layouts/15/Doc2.aspx?sourcedoc=%7B3d1c8094-2701-4fb4-9063-15cdcc659f96%7D
+# This is dataset approval, not an ingestion checkpoint. Always validate each file.
+status: done
+status_policy: ingest_only_when_done
+csv_path: data/email_thread_details.csv
+schema_path: schema.yaml
+ddl_path: ddl.sql
+target_table: public.email_thread_details
+load_mode: replace_snapshot
+reference_snapshot:
+  rows: 21684
+  sha256: 9fb54399233cdd258c9c6eb859e083a67112dd2f5924c1eafb4616910061d75c

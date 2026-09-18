@@ -1,0 +1,34 @@
+dataset: email_thread_summary_dataset
+table: public.email_thread_details
+encoding: utf-8-sig
+primary_key: [record_id]
+# Neither thread_id nor (thread_id, timestamp) uniquely identifies a message.
+generated_columns:
+  - name: record_id
+    type: char(64)
+    nullable: false
+    strategy: sha256_canonical_row
+columns:
+  - name: thread_id
+    type: integer
+    nullable: false
+  - name: subject
+    type: varchar(255)
+    nullable: true
+  - name: timestamp
+    type: timestamp
+    nullable: false
+  - name: from
+    type: varchar(255)
+    nullable: false
+  - name: to
+    type: text
+    nullable: false
+  - name: body
+    type: text
+    nullable: true
+normalization:
+  whitespace: strip_outer
+  nulls: empty_fields_only
+  timestamps: preserve_naive_source_time
+  duplicates: remove_identical_normalized_rows
